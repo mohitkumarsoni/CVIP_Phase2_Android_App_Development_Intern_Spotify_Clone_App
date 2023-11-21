@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/spotify_black"
+    android:paddingBottom="4dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/music_tile_poster"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/lata"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/music_tile_poster"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="16dp">
+        <TextView
+            android:id="@+id/music_title_text_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:minLines="1"
+            tools:text="mera kuch samaan"
+            android:textColor="@color/spotify_white"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="18dp"
+            android:textStyle="bold"
+            android:letterSpacing="0.07"
+            />
+
+        <TextView
+            android:id="@+id/music_title_duration_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:minLines="1"
+            android:layout_below="@+id/music_title_text_tv"
+            tools:text="03:52"
+            android:textColor="@color/hint_grey"
+            android:layout_marginStart="18dp"
+            android:textStyle="bold"
+            android:letterSpacing="0.07"
+            />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/three_dots_icon"
+        android:padding="8dp"
+        android:layout_centerVertical="true"/>
+
+</RelativeLayout>

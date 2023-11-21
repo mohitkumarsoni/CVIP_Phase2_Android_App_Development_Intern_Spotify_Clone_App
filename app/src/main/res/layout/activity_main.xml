@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/spotify_black"
+    tools:context=".activity.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/head_linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal"
+        android:padding="14dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="6dp"
+            android:src="@drawable/person_1_ic" />
+
+        <TextView
+            android:id="@+id/header_option_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginHorizontal="3dp"
+            android:background="@drawable/bg_selected_green"
+            android:clickable="true"
+            android:paddingHorizontal="18dp"
+            android:paddingVertical="4dp"
+            android:text="All"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/header_option_music"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginHorizontal="3dp"
+            android:background="@drawable/bg_not_selected_grey"
+            android:clickable="true"
+            android:paddingHorizontal="18dp"
+            android:paddingVertical="4dp"
+            android:text="Music"
+            android:textColor="@color/spotify_white"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/header_option_Podcasts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginHorizontal="3dp"
+            android:background="@drawable/bg_not_selected_grey"
+            android:clickable="true"
+            android:paddingHorizontal="18dp"
+            android:paddingVertical="4dp"
+            android:text="Podcasts"
+            android:textColor="@color/spotify_white"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/head_linear_layout"
+        android:layout_above="@+id/main_activity_BottomNavigationView"
+        android:background="@color/spotify_black">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="0dp">
+
+            <LinearLayout
+                android:id="@+id/charts_linear_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/spotify_black"
+                android:orientation="vertical"
+                android:padding="14dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Charts"
+                    android:paddingBottom="8dp"
+                    android:textColor="@color/spotify_white"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/main_activity_charts_rv"
+                    android:layout_width="match_parent"
+                    android:backgroundTint="@color/spotify_black"
+                    android:layout_height="wrap_content"
+                    android:background="@color/spotify_white"
+                    android:paddingVertical="4dp" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/popular_radio_linear_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/spotify_black"
+                android:orientation="vertical"
+                android:padding="14dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Popular Radio"
+                    android:paddingBottom="8dp"
+                    android:textColor="@color/spotify_white"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/main_activity_popular_radio_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/spotify_black"
+                    android:background="@color/spotify_white"
+                    android:paddingVertical="4dp" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/hits_different_linear_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/spotify_black"
+                android:orientation="vertical"
+                android:padding="14dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Hits different!"
+                    android:textColor="@color/spotify_white"
+                    android:paddingBottom="8dp"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/main_activity_hits_different_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/spotify_black"
+                    android:background="@color/spotify_white"
+                    android:paddingVertical="4dp" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/uniquely_yours_linear_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/spotify_black"
+                android:orientation="vertical"
+                android:padding="14dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Uniquely yours"
+                    android:paddingBottom="8dp"
+                    android:textColor="@color/spotify_white"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/main_activity_uniquely_yours_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/spotify_black"
+                    android:paddingVertical="4dp" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/popular_album_linear_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/spotify_black"
+                android:orientation="vertical"
+                android:padding="14dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Popular album"
+                    android:paddingBottom="8dp"
+                    android:textColor="@color/spotify_white"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/main_activity_popular_album_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/spotify_black"
+                    android:paddingVertical="4dp" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/indias_best_linear_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/spotify_black"
+                android:orientation="vertical"
+                android:padding="14dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="India's best"
+                    android:paddingBottom="8dp"
+                    android:textColor="@color/spotify_white"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/main_activity_indias_best_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/spotify_black"
+                    android:paddingVertical="4dp" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/popular_artists_linear_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/spotify_black"
+                android:orientation="vertical"
+                android:padding="14dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Popular artists"
+                    android:paddingBottom="8dp"
+                    android:textColor="@color/spotify_white"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/main_activity_popular_artists_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/spotify_black"
+                    android:paddingVertical="4dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <include
+        android:id="@+id/main_activity_BottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/layout_bottom_nav_view"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>

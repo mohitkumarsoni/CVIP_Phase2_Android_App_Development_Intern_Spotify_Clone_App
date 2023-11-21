@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/spotify_black"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.Library_Activity">
+
+    <RelativeLayout
+        android:id="@+id/head_relative_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_alignParentTop="true"
+        android:padding="14dp">
+        <ImageView
+            android:id="@+id/user_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="6dp"
+            android:src="@drawable/person_1_ic" />
+        <TextView
+            android:id="@+id/search_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your Library"
+            android:layout_toEndOf="@+id/user_iv"
+            android:layout_centerVertical="true"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:layout_marginStart="20dp"
+            android:textStyle="bold"/>
+
+        <ImageButton
+            android:id="@+id/search_ib"
+            android:layout_width="48dp"
+            android:layout_height="38sp"
+            android:backgroundTint="@color/spotify_black"
+            android:layout_centerVertical="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/search_ic"
+            android:layout_toStartOf="@+id/add_ib"
+            android:layout_alignParentEnd="false"
+            app:tint="@color/spotify_white" />
+
+        <ImageButton
+            android:id="@+id/add_ib"
+            android:layout_width="48dp"
+            android:layout_height="38sp"
+            android:backgroundTint="@color/spotify_black"
+            android:layout_centerVertical="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/add_ic"
+            android:layout_alignParentEnd="true"
+            app:tint="@color/spotify_white" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/option_below_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="false"
+        android:layout_below="@id/head_relative_layout"
+        android:orientation="horizontal"
+        android:padding="14dp">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginHorizontal="3dp"
+            android:background="@drawable/bg_not_selected_grey"
+            android:clickable="true"
+            android:paddingHorizontal="18dp"
+            android:paddingVertical="4dp"
+            android:text="Playlists"
+            android:textColor="@color/spotify_white"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginHorizontal="3dp"
+            android:background="@drawable/bg_not_selected_grey"
+            android:clickable="true"
+            android:paddingHorizontal="18dp"
+            android:paddingVertical="4dp"
+            android:text="Artists"
+            android:textColor="@color/spotify_white"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/divider_line"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@color/black"
+        android:layout_below="@+id/option_below_head"/>
+
+    <LinearLayout
+        android:id="@+id/recents_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/divider_line"
+        android:padding="6dp"
+        android:background="@color/spotify_black"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="26dp"
+            android:layout_height="16dp"
+            android:src="@drawable/up_down_ic"
+            android:layout_gravity="center_vertical"
+            android:layout_marginHorizontal="14sp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Recents"
+            android:textColor="@color/spotify_white"
+            android:layout_gravity="center_vertical"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_below="@id/recents_layout"
+       android:layout_marginHorizontal="18dp"
+       android:layout_marginVertical="6dp"
+       android:orientation="horizontal">
+       <ImageView
+           android:layout_width="80dp"
+           android:layout_height="80dp"
+           android:background="@drawable/purple_white_gradient"
+           android:src="@drawable/heart_ic"
+           android:padding="20dp"/>
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginStart="18dp"
+           android:orientation="vertical"
+           android:background="@color/spotify_black"
+           android:layout_gravity="center_vertical">
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Liked Songs"
+               android:textColor="@color/spotify_white"
+               android:textSize="20sp"
+               android:textStyle="bold"/>
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Playlist. 7 songs"
+               android:drawablePadding="4dp"
+               android:textColor="#CCCCCC"
+               android:textSize="16sp"
+               android:textStyle="normal"
+               app:drawableStartCompat="@drawable/pin_ic" />
+       </LinearLayout>
+   </LinearLayout>
+
+    <include
+        android:id="@+id/library_activity_BottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/layout_bottom_nav_view"
+        android:layout_alignParentBottom="true"/>
+
+
+</RelativeLayout>

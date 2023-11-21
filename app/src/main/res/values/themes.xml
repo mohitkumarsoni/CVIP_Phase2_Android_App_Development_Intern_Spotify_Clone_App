@@ -1,0 +1,22 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.SpotifyClone_Coders_Cave" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <item name="colorPrimary">@color/spotify_black</item>
+        <item name="colorPrimaryVariant">@color/spotify_black</item>
+        <item name="colorSecondary">@color/spotify_black</item>
+
+        <item name="android:windowActivityTransitions">false</item>
+
+    </style>
+
+    <style name="Theme.SpotifyClone_Coders_Cave" parent="Base.Theme.SpotifyClone_Coders_Cave" />
+    <style name="Theme.SpotifyClone_Coders_Cave.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="Theme.SpotifyClone_Coders_Cave.AppBarOverlay"
+        parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="Theme.SpotifyClone_Coders_Cave.PopupOverlay"
+        parent="ThemeOverlay.AppCompat.Light" />
+</resources>

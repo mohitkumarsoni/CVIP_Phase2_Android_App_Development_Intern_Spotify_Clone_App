@@ -1,0 +1,11 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.SpotifyClone_Coders_Cave" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Customize your dark theme here. -->
+         <item name="colorPrimary">@color/spotify_black</item>
+         <item name="colorPrimaryVariant">@color/spotify_black</item>
+        <item name="colorSecondary">@color/spotify_black</item>
+
+        <item name="android:windowActivityTransitions">false</item>
+    </style>
+</resources>
